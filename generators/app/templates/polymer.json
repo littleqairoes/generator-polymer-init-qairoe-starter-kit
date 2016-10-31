@@ -1,0 +1,16 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/<%= projectNameSlugged %>-app.html",
+  "fragments": [],
+  "sourceGlobs": [
+   "src/**/*",
+   "images/**/*",
+   "bower.json",
+   "config/**/*",
+   "fonts/**/*"
+  ],
+  "includeDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+  ]
+}

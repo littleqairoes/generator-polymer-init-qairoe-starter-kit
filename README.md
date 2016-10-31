@@ -3,10 +3,21 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-polymer-init-qairoe-starter-kit using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) 
+and generator-polymer-init-qairoe-starter-kit 
+or install [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli) 
+using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+
 
 ```bash
 npm install -g yo
+npm install -g generator-polymer-init-qairoe-starter-kit
+```
+
+or
+
+```bash
+npm install -g polymer-cli
 npm install -g generator-polymer-init-qairoe-starter-kit
 ```
 
@@ -15,6 +26,16 @@ Then generate your new project:
 ```bash
 yo polymer-init-qairoe-starter-kit
 ```
+
+or
+
+```bash
+polymer-cli qairoe-starter-kit
+```
+
+## What it will build
+
+
 
 ## Getting To Know Yeoman
 
