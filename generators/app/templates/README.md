@@ -100,6 +100,7 @@ The project development structure consists of this...
 ### Prerequisites
 
 
+
 Install [polymer-cli](https://github.com/Polymer/polymer-cli):
 
     npm install -g polymer-cli
