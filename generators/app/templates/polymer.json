@@ -1,6 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "core/<%= projectNameSlugged %>-app.html",
+  "shell": "core/<%= projectNameSlugged %>-app-shell.html",
   "fragments": [
     "pages/home-page/home-page.html",
     "pages/not-authorized-page/not-authorized-page.html",

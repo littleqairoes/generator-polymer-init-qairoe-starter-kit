@@ -9,7 +9,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "polymer serve -H $IP -p $PORT",
-    "build": "polymer build",
     "bundled": "polymer serve build/bundled -H $IP -p $PORT",
     "unbundled": "polymer serve build/unbundled -H $IP -p $PORT",
     "gulp": "$(npm bin)/gulp",
