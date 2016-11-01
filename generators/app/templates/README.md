@@ -42,8 +42,12 @@ The project development structure consists of this...
 |   |--manifest/
 |   |--favicon.ico
 |
+|--pages/
+|
 |--src/
 |   |--<%= projectNameSlugged %>-app.html
+|
+|--web-components/
 |
 |--test/
 |
@@ -68,9 +72,11 @@ The project development structure consists of this...
     * **manifest/** holds icon branding for the website. See 
         https://goo.gl/OOhYW5 for details. (Files inside are configurable).
     * **favicon.ico** is the icon that we see at the tab (configurable/replacable)
-* **src/** is where your application-specific custom elements will go
+* **pages/** is where all your custom-made page elements will go
+* **src/** is where your application-specific root-element will go
     * **<%= projectNameSlugged %>-app.html** is the main core element called in the index.html that
         renders the pages.
+* **web-components/** is where reusable custom elements that are not published or just for this project will go
 * **test/** holds all integrated test cases for continuous integration and making sure
     that changes in the app doesn't break the app. (files inside are configurable)
 * **bower.json** is a configurable file that holds all direct dependencies of the
