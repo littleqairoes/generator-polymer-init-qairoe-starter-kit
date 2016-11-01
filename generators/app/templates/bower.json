@@ -1,7 +1,7 @@
 {
   "name": "<%= projectNameSlugged %>",
   "authors": [
-    "<%= projectAuthors %>"
+    "<%= projectAuthor %>"
   ],
   "private": true,
   "dependencies": {
