@@ -1,0 +1,136 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.5.0/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.5.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/ubuntu/workspace/generator-polymer-init-qairoe-starter-kit',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package.tgz',
+10 verbose tar pack   '/home/ubuntu/workspace/generator-polymer-init-qairoe-starter-kit' ]
+11 verbose tarball /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package.tgz
+12 verbose folder /home/ubuntu/workspace/generator-polymer-init-qairoe-starter-kit
+13 info prepublish generator-polymer-init-qairoe-starter-kit@0.0.1
+14 verbose unsafe-perm in lifecycle true
+15 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package.tgz
+16 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd generator-polymer-init-qairoe-starter-kit@0.0.1
+18 verbose afterAdd /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package/package.json written
+21 silly publish { name: 'generator-polymer-init-qairoe-starter-kit',
+21 silly publish   version: '0.0.1',
+21 silly publish   description: 'Starter kit that is based on Polymer starter kit but used for Little Qairoes Projects and more!',
+21 silly publish   homepage: 'https://github.com/littleqairoes/generator-polymer-init-qairoe-starter-kit#readme',
+21 silly publish   author:
+21 silly publish    { name: 'Toni-Jan Keith Monserrat',
+21 silly publish      email: 'tonijanmonserrat@gmail.com' },
+21 silly publish   files: [ 'generators' ],
+21 silly publish   main: 'generators/index.js',
+21 silly publish   keywords:
+21 silly publish    [ 'Little Qairoes',
+21 silly publish      'starter kit',
+21 silly publish      'Polymer',
+21 silly publish      'PRPL pattern',
+21 silly publish      'Progressive Web App',
+21 silly publish      'yeoman-generator' ],
+21 silly publish   dependencies:
+21 silly publish    { chalk: '^1.0.0',
+21 silly publish      slug: '^0.9.1',
+21 silly publish      'yeoman-generator': '^0.23.0',
+21 silly publish      yosay: '^1.0.0' },
+21 silly publish   devDependencies:
+21 silly publish    { 'yeoman-test': '^1.0.0',
+21 silly publish      'yeoman-assert': '^2.0.0',
+21 silly publish      eslint: '^3.1.1',
+21 silly publish      'eslint-config-xo-space': '^0.15.0',
+21 silly publish      gulp: '^3.9.0',
+21 silly publish      'gulp-eslint': '^3.0.1',
+21 silly publish      'gulp-exclude-gitignore': '^1.0.0',
+21 silly publish      'gulp-line-ending-corrector': '^1.0.1',
+21 silly publish      'gulp-istanbul': '^1.0.0',
+21 silly publish      'gulp-mocha': '^3.0.1',
+21 silly publish      'gulp-plumber': '^1.0.0',
+21 silly publish      'gulp-nsp': '^2.1.0',
+21 silly publish      'gulp-coveralls': '^0.1.0' },
+21 silly publish   eslintConfig: { extends: 'xo-space', env: { mocha: true } },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/littleqairoes/generator-polymer-init-qairoe-starter-kit.git' },
+21 silly publish   scripts: { prepublish: 'gulp prepublish', test: 'gulp' },
+21 silly publish   license: 'MIT',
+21 silly publish   readme: '<!--# generator-polymer-init-qairoe-starter-kit [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]-->\n# generator-polymer-init-qairoe-starter-kit\n> Starter kit that is based on Polymer starter kit but used for Little Qairoes Projects and more!\n\n## Installation\n\nFirst, install [Yeoman](http://yeoman.io) \nand generator-polymer-init-qairoe-starter-kit \nor install [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli) \nusing [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).\n\n\n```bash\nnpm install -g yo\nnpm install -g generator-polymer-init-qairoe-starter-kit\n```\n\nor\n\n```bash\nnpm install -g polymer-cli\nnpm install -g generator-polymer-init-qairoe-starter-kit\n```\n\nThen generate your new project:\n\n```bash\nyo polymer-init-qairoe-starter-kit\n```\n\nor\n\n```bash\npolymer init qairoe-starter-kit\n```\n\n## What it will build\n\n\n\n## Getting To Know Yeoman\n\n * Yeoman has a heart of gold.\n * Yeoman is a person with feelings and opinions, but is very easy to work with.\n * Yeoman can be too opinionated at times but is easily convinced not to be.\n * Feel free to [learn more about Yeoman](http://yeoman.io/).\n\n## License\n\nMIT © [Toni-Jan Keith Monserrat]()\n\n\n[npm-image]: https://badge.fury.io/js/generator-polymer-init-qairoe-starter-kit.svg\n[npm-url]: https://npmjs.org/package/generator-polymer-init-qairoe-starter-kit\n[travis-image]: https://travis-ci.org/littleqairoes/generator-polymer-init-qairoe-starter-kit.svg?branch=master\n[travis-url]: https://travis-ci.org/littleqairoes/generator-polymer-init-qairoe-starter-kit\n[daviddm-image]: https://david-dm.org/littleqairoes/generator-polymer-init-qairoe-starter-kit.svg?theme=shields.io\n[daviddm-url]: https://david-dm.org/littleqairoes/generator-polymer-init-qairoe-starter-kit\n[coveralls-image]: https://coveralls.io/repos/littleqairoes/generator-polymer-init-qairoe-starter-kit/badge.svg\n[coveralls-url]: https://coveralls.io/r/littleqairoes/generator-polymer-init-qairoe-starter-kit\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '00e1af0692ddbf8a6dfc1be9b2437de45409e3b4',
+21 silly publish   bugs: { url: 'https://github.com/littleqairoes/generator-polymer-init-qairoe-starter-kit/issues' },
+21 silly publish   _id: 'generator-polymer-init-qairoe-starter-kit@0.0.1',
+21 silly publish   _shasum: 'dd3f1539126077a2dd96678103f40d1e0b05ea41',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name generator-polymer-init-qairoe-starter-kit
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'generator-polymer-init-qairoe-starter-kit',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'generator-polymer-init-qairoe-starter-kit',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/generator-polymer-init-qairoe-starter-kit
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/ubuntu/.npm/generator-polymer-init-qairoe-starter-kit/0.0.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/generator-polymer-init-qairoe-starter-kit
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 3:11:22 AM
+33 verbose request using bearer token for auth
+34 verbose request id 0cc1e1569c1f8c04
+35 http request PUT https://registry.npmjs.org/generator-polymer-init-qairoe-starter-kit
+36 http 403 https://registry.npmjs.org/generator-polymer-init-qairoe-starter-kit
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 04 Nov 2016 03:11:24 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ord1721-ORD',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1478229083.361604,VS0,VE1180',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /home/ubuntu/.npm/registry.npmjs.org/generator-polymer-init-qairoe-starter-kit on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : generator-polymer-init-qairoe-starter-kit
+40 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:87:13)
+40 verbose stack     at Request.emit (events.js:172:7)
+40 verbose stack     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:82:20)
+40 verbose stack     at Request.emit (events.js:169:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.5.0/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid generator-polymer-init-qairoe-starter-kit
+43 verbose cwd /home/ubuntu/workspace/generator-polymer-init-qairoe-starter-kit
+44 error Linux 4.2.0-c9
+45 error argv "/home/ubuntu/.nvm/versions/node/v4.5.0/bin/node" "/home/ubuntu/.nvm/versions/node/v4.5.0/bin/npm" "publish"
+46 error node v4.5.0
+47 error npm  v2.15.9
+48 error code E403
+49 error "You cannot publish over the previously published version 0.0.1." : generator-polymer-init-qairoe-starter-kit
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
