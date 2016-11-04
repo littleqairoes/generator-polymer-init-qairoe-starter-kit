@@ -38,7 +38,7 @@ global.config = {
 
 gulp.task('watch-all', function(){
   injectSass();
-  watch(['src/**/*.scss'], injectSass);
+  watch(['pages/**/*.scss', 'web-components/**/*.scss', 'styles/**/*.scss'], injectSass);
 });
 
 gulp.task('injectSass', injectSass);

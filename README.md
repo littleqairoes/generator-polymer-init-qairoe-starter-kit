@@ -1,4 +1,5 @@
-# generator-polymer-init-qairoe-starter-kit [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+<!--# generator-polymer-init-qairoe-starter-kit [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]-->
+# generator-polymer-init-qairoe-starter-kit
 > Starter kit that is based on Polymer starter kit but used for Little Qairoes Projects and more!
 
 ## Installation
@@ -30,7 +31,7 @@ yo polymer-init-qairoe-starter-kit
 or
 
 ```bash
-polymer-cli qairoe-starter-kit
+polymer init qairoe-starter-kit
 ```
 
 ## What it will build

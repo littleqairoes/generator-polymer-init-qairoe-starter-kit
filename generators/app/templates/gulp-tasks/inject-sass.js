@@ -9,7 +9,16 @@ var excludeDir = basePath+"bower_components/";
 var ext = "**/*.scss";
 var polymerPath = 'bower_components/polymer/polymer.html';
 
-var includePaths = ['src/**/', 'src/pages/**/', 'src/'];
+/**
+ * We need to specify to nodeSass the include paths for Sass' @import
+ * command. These are all the paths that it will look for it.
+ *
+ * Failing to specify this, will NOT Compile your scss and inject it to
+ * your .html file.
+ *
+ */
+
+var includePaths = ['core/**/', 'pages/**/', 'web-components/**/', 'styles/**/'];
 
 var injectSass = function () {
   /* Original creator: David Vega. I just modified
@@ -29,10 +38,14 @@ var injectSass = function () {
   * exclude this path, this will look inside bower_components and will take a long time
   * (around 7.4 seconds in my machine) to replace all the files.
   */
-
+  
   gutil.log('Restarting SASS');
 
-  return gulp.src([basePath + 'src/' + ext, basePath + 'src/pages/' + ext, '!'+excludeDir+ext])
+  return gulp.src([
+    basePath + 'core/' + ext, 
+    basePath + 'web-components/' + ext,
+    basePath + 'styles/' + ext, 
+    basePath + 'pages/' + ext, '!'+excludeDir+ext])
     .pipe(map(function(file, cb) {
       if (path.basename(file.path, '.scss').indexOf('_') === 0) {
         return cb();
