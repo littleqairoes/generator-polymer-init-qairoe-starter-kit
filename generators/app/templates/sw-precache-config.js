@@ -20,6 +20,10 @@ module.exports = {
       // cache Google user profile pics
       urlPattern: /^https:\/\/lh3.googleusercontent.com\/.*/,
       handler: 'networkFirst'
+    },
+    {
+      urlPattern: /service-worker.js/,
+      handler: 'networkFirst'
     }
   ]
 };
