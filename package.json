@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "slug": "^0.9.1",
+    "slugify": "^1.0.2",
     "yeoman-generator": "^0.23.0",
     "yosay": "^1.0.0"
   },

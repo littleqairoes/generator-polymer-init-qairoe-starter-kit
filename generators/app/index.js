@@ -2,7 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var slug = require('slug');
+var slug = require('slugify');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
