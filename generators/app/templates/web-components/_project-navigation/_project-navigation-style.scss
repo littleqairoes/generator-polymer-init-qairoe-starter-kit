@@ -1,0 +1,18 @@
+//
+
+@import 'styles/variables';
+
+.<%= projectNameSlugged %>-navigation-header {
+  .<%= projectNameSlugged %>-navigation-item {
+    color: $gray-dark;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.<%= projectNameSlugged %>-navigation-item {
+  &.iron-selected {
+    font-weight: bold;
+  }
+}

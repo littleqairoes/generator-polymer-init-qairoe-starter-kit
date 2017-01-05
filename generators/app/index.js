@@ -31,20 +31,31 @@ module.exports = yeoman.Base.extend({
       name: 'projectAuthor',
       message: 'Who is the author of this project?',
       default: ''
+    }, {
+      type: 'input',
+      name: 'projectRaven',
+      message: 'What\'s the Sentry.io api link to connect the project with?',
+      default: 'https://827acc4cd4d04b009157881a6939baac@sentry.io/123192'
+    }, {
+      type: 'input',
+      name: 'projectGoogleAnalytics',
+      message: 'What\'s the Google Analytics ID?',
+      default: 'UA-89151399-1'
     }];
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
       props.projectNameSlugged = slug(props.projectName.trim().toLowerCase());
+      props.projectNameUpperCase = props.projectNameSlugged.trim().toUpperCase().replace('-', '');
       this.props = props;
     }.bind(this));
   },
 
   writing: function () {
-    //var projectName = this.props.projectName;
+    // var projectName = this.props.projectName;
     var projectNameSlugged = this.props.projectNameSlugged;
-    //var projectDescription = this.props.projectDescription;
-    
+    // var projectDescription = this.props.projectDescription;
+
     // Copies all files that doesn't have an underscore, and also replacing the
     // placeholders with values from the prompts
     this.fs.copyTpl(
@@ -52,30 +63,30 @@ module.exports = yeoman.Base.extend({
       this.destinationPath(),
       this.props
     );
-    
+
     // This area copies all the files with underscores one by one
-    
+
     // Copies the _variables.scss
     this.fs.copyTpl(
       this.templatePath('styles/_variables.scss'),
       this.destinationPath('styles/_variables.scss'),
       this.props
     );
-    
+
     // Copies the _mixins.scss
     this.fs.copyTpl(
       this.templatePath('styles/_mixins.scss'),
       this.destinationPath('styles/_mixins.scss'),
       this.props
     );
-    
+
     // Copies the app-shell
     this.fs.copyTpl(
       this.templatePath('core/_project-app-shell.html'),
       this.destinationPath('core/' + projectNameSlugged + '-app-shell.html'),
       this.props
     );
-    
+
     // Copies the web-components here
     // Copies the header
     this.fs.copyTpl(
@@ -93,7 +104,7 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('web-components/' + projectNameSlugged + '-header/' + projectNameSlugged + '-header-style.scss'),
       this.props
     );
-    
+
     // Copies the drawer
     this.fs.copyTpl(
       this.templatePath('web-components/_project-drawer/_project-drawer.html'),
@@ -110,43 +121,61 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('web-components/' + projectNameSlugged + '-drawer/' + projectNameSlugged + '-drawer-style.scss'),
       this.props
     );
-    
+
     // Copies the icons
     this.fs.copy(
       this.templatePath('web-components/_project-icons/_project-icons.html'),
       this.destinationPath('web-components/' + projectNameSlugged + '-icons/' + projectNameSlugged + '-icons.html') 
     );
-    
+
+    // Copies the navigation
+    this.fs.copyTpl(
+      this.templatePath('web-components/_project-navigation/_project-navigation.html'),
+      this.destinationPath('web-components/' + projectNameSlugged + '-navigation/' + projectNameSlugged + '-navigation.html'),
+      this.props
+    );
+    this.fs.copyTpl(
+      this.templatePath('web-components/_project-navigation/_project-navigation-style.html'),
+      this.destinationPath('web-components/' + projectNameSlugged + '-navigation/' + projectNameSlugged + '-navigation-style.html'),
+      this.props
+    );
+    this.fs.copyTpl(
+      this.templatePath('web-components/_project-navigation/_project-navigation-style.scss'),
+      this.destinationPath('web-components/' + projectNameSlugged + '-navigation/' + projectNameSlugged + '-navigation-style.scss'),
+      this.props
+    );
+
+
     // Copies all files in the images
     this.fs.copy(
       this.templatePath('images/_favicon.ico'),
-      this.destinationPath('images/favicon.ico') 
+      this.destinationPath('images/favicon.ico')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-48x48.png'),
-      this.destinationPath('images/manifest/icon-48x48.png') 
+      this.destinationPath('images/manifest/icon-48x48.png')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-72x72.png'),
-      this.destinationPath('images/manifest/icon-72x72.png') 
+      this.destinationPath('images/manifest/icon-72x72.png')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-96x96.png'),
-      this.destinationPath('images/manifest/icon-96x96.png') 
+      this.destinationPath('images/manifest/icon-96x96.png')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-144x144.png'),
-      this.destinationPath('images/manifest/icon-144x144.png') 
+      this.destinationPath('images/manifest/icon-144x144.png')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-192x192.png'),
-      this.destinationPath('images/manifest/icon-192x192.png') 
+      this.destinationPath('images/manifest/icon-192x192.png')
     );
     this.fs.copy(
       this.templatePath('images/manifest/_icon-512x512.png'),
-      this.destinationPath('images/manifest/icon-512x512.png') 
+      this.destinationPath('images/manifest/icon-512x512.png')
     );
-    
+
     // Creates hidden files for git
     this.write('.gitattributes', '* text=auto');
     this.write('.gitignore', 'bower_components/\nbuild/\nnode_modules/');
@@ -166,7 +195,7 @@ module.exports = yeoman.Base.extend({
                               '  - \'4\'\n' +
                               'before_script:\n' +
                               '  - npm install -g bower polymer-cli\n' +
-                              '  - bower install\n'+
+                              '  - bower install\n' +
                               'script:\n' +
                               '  - xvfb-run polymer test');
   },

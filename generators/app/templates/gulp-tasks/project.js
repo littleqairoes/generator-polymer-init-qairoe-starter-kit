@@ -14,6 +14,7 @@ const path = require('path');
 const gulp = require('gulp');
 const mergeStream = require('merge-stream');
 const polymer = require('polymer-build');
+const fs = require('fs');
 
 const polymerJSON = require(global.config.polymerJsonPath);
 const project = new polymer.PolymerProject(polymerJSON);
@@ -110,23 +111,29 @@ function serviceWorker() {
 
 // Returns a Promise to generate a service worker for bundled output
 function writeBundledServiceWorker() {
-  return polymer.addServiceWorker({
+  return polymer.generateServiceWorker({
     project: project,
     buildRoot: bundledPath,
     swConfig: global.config.swPrecacheConfig,
     serviceWorkerPath: global.config.serviceWorkerPath,
     bundled: true
-  });
+  }).then(addServiceWorkerCode.bind(this, bundledPath));
 }
 
 // Returns a Promise to generate a service worker for unbundled output
 function writeUnbundledServiceWorker() {
-  return polymer.addServiceWorker({
+  return polymer.generateServiceWorker({
     project: project,
     buildRoot: unbundledPath,
     swConfig: global.config.swPrecacheConfig,
     serviceWorkerPath: global.config.serviceWorkerPath
-  });
+  }).then(addServiceWorkerCode.bind(this, bundledPath));
+}
+
+function addServiceWorkerCode(path, buffer) {
+  var code = buffer.toString('utf8');
+  code += '\n//Additional Code here\n';
+  fs.writeFileSync(path + '/' + global.config.serviceWorkerPath, code, 'utf8');
 }
 
 module.exports = {

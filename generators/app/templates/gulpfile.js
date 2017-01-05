@@ -25,18 +25,18 @@ global.config = {
   swPrecacheConfig: swPrecacheConfig
 };
 /**
- * This is a three part gulpfile. 
- * 
+ * This is a three part gulpfile.
+ *
  * 1. SASS Strategy
  * 2. Page Building Strategy
  * 3. Production Building Strategy
- */  
+ */
 
 /**
  * SASS STRATEGY
- */ 
+ */
 
-gulp.task('watch-all', function(){
+gulp.task('watch-all', function () {
   injectSass();
   watch(['pages/**/*.scss', 'web-components/**/*.scss', 'styles/**/*.scss'], injectSass);
 });
@@ -46,8 +46,8 @@ gulp.task('injectSass', injectSass);
 
 /**
  * PRODUCTION BUILD STRATEGY
- */ 
- 
+ */
+
 //   Got problems? Try logging 'em
 // const logging = require('plylog');
 // logging.setVerbose();
@@ -87,7 +87,7 @@ function source() {
 // case you need it :)
 function dependencies() {
   return project.splitDependencies()
-    .pipe(gulpif(function(file) {
+    .pipe(gulpif(function (file) {
       return file.path.indexOf('firebase') < 0 && file.path.indexOf('web-animations') < 0 && /\.js$/.test(file.path);
     }, babel({presets: ['es2015'], compact: true, minified: true})))
     .pipe(gulpif(/\.js$/, uglify({compress: true})))
